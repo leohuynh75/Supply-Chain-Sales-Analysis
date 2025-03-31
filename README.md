@@ -45,9 +45,46 @@ This dataset consists of 29 columns, each representing a key aspect supply chain
 
 ## III. Methodology
 ### 1. Data preparation & cleaning
-Firstly, I will check the information of the dataset and here is the result:
+I will do this step on Google Colabs. Firstly, I will check the information of the dataset and here is the result:
 |![](images/fig.1.png)|
 |:--:|
 |**Fig.1. The information of the dataset**|
 
-There is no missing values in the dataset
+**There is no missing values in the dataset**. But I need to convert "," into "." in numeric data by the following code:
+```python
+for col in df.select_dtypes(include='object').columns:
+  df[col] = df[col].str.replace(",", ".", regex=True)
+```
+Next, convert the datatype of the columns that can be converted to numeric by doing the following:
+```python
+df = df.apply(pd.to_numeric, errors="ignore")
+```
+And here is the result after the changes:
+|![](images/fig.2.png)|
+|:--:|
+|**Fig.2. The information of the dataset after changing data types**|
+
+Finally, I will change the data type of the Order Date and Ship Date columns to datetime.
+```python
+df['Order Date'] = pd.to_datetime(df['Order Date'], format ="mixed")
+df['Ship Date'] = pd.to_datetime(df['Ship Date'], format = "mixed")
+```
+|![](images/fig.3.png)|
+|:--:|
+|**Fig.3. Data types of Order Date and Ship Date**|
+
+So we have a complete dataset table, ready for visualization on Power Bi.
+
+## IV. Visualization
+Here is my dashboard, I will delve into details in the next part.
+|![](images/fig.4.png)|![](images/fig.5.png)|
+|:--:|:--:|
+
+To analyze and provide insights, as well as actionable insights, we need to answer the following questions:
+*1. What is the average delivery time, and which region has the slowest deliveries ?*
+   
+Based on the dashboard, the average delivery time for the business is around 35 days. And the West region has the lowest average delivery time, around 33 days.
+|![](images/fig.6.png)|
+|:--:|
+|**Fig.4. AVG Delivery Time by Region**|
+
