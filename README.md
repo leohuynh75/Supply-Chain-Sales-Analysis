@@ -81,10 +81,25 @@ Here is my dashboard, I will delve into details in the next part.
 |:--:|:--:|
 
 To analyze and provide insights, as well as actionable insights, we need to answer the following questions:
+
 *1. What is the average delivery time, and which region has the slowest deliveries ?*
    
-Based on the dashboard, the average delivery time for the business is around 35 days. And the West region has the lowest average delivery time, around 33 days.
+Based on the dashboard, the average delivery time for the business is around 35 days. And the West region has the lowest average delivery time, around 33 days. Meanwhile, the Central region has the longest average delivery time, around 37 days.
 |![](images/fig.6.png)|
 |:--:|
 |**Fig.4. AVG Delivery Time by Region**|
+
+To explain the difference, let's look at the following two figures, which are a matrix showing the distribution of shipping modes in the regions and a column chart showing the average delivery time of each shipping mode.
+|![](images/fig.7.png)|![](images/fig.8.png)|
+|:--:|:--:|
+|**Fig.5. Matrix showing the distribution of shipping modes in the regions**|**Fig.6. Column chart showing the AVG delivery time of each shipping mode**|
+
+We can see in the matrix that the West region has the highest number of orders shipped using the two express delivery methods (First Class and Same Day) among the four regions, with **256** and **89** orders shipped, respectively. This explains why the average delivery time in this region is often shorter than in other regions.
+
+*2. How does delivery time impact profitability ?*
+
+|![](images/fig.9.png)|
+|:--:|
+|**Fig.7. Profit by regions**|
+
 
