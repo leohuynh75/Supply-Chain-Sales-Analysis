@@ -94,12 +94,17 @@ To explain the difference, let's look at the following two figures, which are a 
 |:--:|:--:|
 |**Fig.5. Matrix showing the distribution of shipping modes in the regions**|**Fig.6. Column chart showing the AVG delivery time of each shipping mode**|
 
-We can see in the matrix that the West region has the highest number of orders shipped using the two express delivery methods (First Class and Same Day) among the four regions, with **256** and **89** orders shipped, respectively. This explains why the average delivery time in this region is often shorter than in other regions.
+We can see in the matrix that the West region has the highest number of orders shipped using the two express delivery methods (First Class and Same Day) among the four regions, with **256** and **89** orders shipped, respectively. In Fig.7, we can also see that the average delivery time of shipping modes in the Western region is shorter than that of the same shipping modes in other regions. This explains why the average delivery time in this region tends to be shorter than in other regions.
+|![](images/fig.10.png)|
+|:--:|
+|**Fig.7. AVG Delivery Time by Regions and Shipping Mode**|
 
 *2. How does delivery time impact profitability ?*
 
 |![](images/fig.9.png)|
 |:--:|
-|**Fig.7. Profit by regions**|
+|**Fig.8. Profit by regions**|
 
+From the chart in Figure 8, we can see that the West region with the lowest average delivery time is the region with the highest profit. This may be because customers perceive this region as having faster delivery times than other regions, so they place more orders, **1611 orders** in total (Matrix in Figure 5 shows that), thereby helping to increase revenue, as well as profit in the region.
 
+*3. Which region has the highest return rate ?*
