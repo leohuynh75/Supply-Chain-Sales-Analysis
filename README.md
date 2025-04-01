@@ -108,3 +108,26 @@ We can see in the matrix that the West region has the highest number of orders s
 From the chart in Figure 8, we can see that the West region with the lowest average delivery time is the region with the highest profit. This may be because customers perceive this region as having faster delivery times than other regions, so they place more orders, **1611 orders** in total (Matrix in Figure 5 shows that), thereby helping to increase revenue, as well as profit in the region.
 
 *3. Which region has the highest return rate ?*
+
+|![](images/fig.11.png)|
+|:--:|
+|**Fig.9. Total returned orders by regions**|
+
+Despite being known as the region with the shortest average delivery time, the West region also had the highest number of returned orders, with **189 orders**, accounting for **63.85%** of the business's total returned orders (Fig.11). To examine why the West region has such a high return rate, let's look at the image below (Fig.12)
+|![](images/fig.13.png)|
+|:--:|
+|**Fig.10. Total returned orders by categories and regions**|
+
+From the above matrix, we can see that in the Western region, the highest number of returned orders belongs to Office Supplies, with **149 returned orders**, this is also the category with the highest return rate of the business, we will discuss the issue in the next question.
+
+*4. Which product has the highest return rate, and what are the key causes ?*
+
+|![](images/fig.14.png)|
+|:--:|
+|**Fig.11. Returned rates by categories**|
+
+Figure 11 shows the number of times the three product categories (Office Supplies, Furniture, Technology) were returned in orders. Of these, the Office Supplies category led with **473 returns**. There are a few reasons why this could happen, it could be the sub-category of the category or the type of customer ordering these Office Supplies items. Let’s take a look at some visuals to try and figure out why.
+
+|![](images/fig.15.png)|![](images/fig.16.png)|
+|:--:|:--:|
+|**Fig.12. Table showing top 5 most returned sub-categories**|**Fig.13. Matrix showing returned rates by customer segment and categories**|
