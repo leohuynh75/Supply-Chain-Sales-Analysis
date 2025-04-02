@@ -131,3 +131,5 @@ Figure 11 shows the number of times the three product categories (Office Supplie
 |![](images/fig.15.png)|![](images/fig.16.png)|
 |:--:|:--:|
 |**Fig.12. Table showing top 5 most returned sub-categories**|**Fig.13. Matrix showing returned rates by customer segment and categories**|
+
+
