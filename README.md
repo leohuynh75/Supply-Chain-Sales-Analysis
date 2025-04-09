@@ -75,61 +75,45 @@ df['Ship Date'] = pd.to_datetime(df['Ship Date'], format = "mixed")
 
 So we have a complete dataset table, ready for visualization on Power Bi.
 
-## IV. Visualization
+### 2. Visualization & Give insights
 Here is my dashboard, I will delve into details in the next part.
-|![](images/fig.4.png)|![](images/fig.5.png)|
+|![](images/dashboard_1.png)|![](images/dashboard_2.png)|
 |:--:|:--:|
+|![](images/dashboard_3.png)|![](images/dashboard_4.png)|
 
-To analyze and provide insights, as well as actionable insights, we need to answer the following questions:
+**Revenue & Supply Chain Performance**
+- Revenue increased, but the gross margin was negative. Total revenue for the year 2017 reached **$631.9k**, up **19.62%** year over year. However, gross margin was negative, **-1.83%**. This could be due to an unreasonable pricing policing, where costs are higher than selling prices, and excessive discounts could also lead to this situation.
+- Technology products lead in revenue, with **$0.71m** followed by products in the office supplies and furniture categories, with **$0.64m** and **$0.62m** respectively. However, office supplies have the highest profit, due to much lower costs.
+- The consumer segment brings in the largest revenue (**$995.1k**), followed by corporate (**$614.8k**) and finally home office (**$364.7k**). It can be seen that the consumer segment is still the main customer segment that needs to be focused on, while it is also necessary to increase attention to the corporate customer segment and improve the experience of the home office segment.
+- Average delivery time varies between regions. The fastest region is the West, at **32.59** days, and the slowest is the Central, at 36.98 days. This difference can affect the profits these regions bring in, with the fastest region being the West, which brought in a profit of **$15k**. Meanwhile, the Central region made a huge loss of **$38k**.
+- Inappropriate discount policy causes heavy losses in furniture products. Furniture accounted for the largest portion of total costs, at **$723.55k**. However, due to inappropriate discounting policies, this resulted in a loss of profit of up to **$105k**.
 
-*1. What is the average delivery time, and which region has the slowest deliveries ?*
-   
-Based on the dashboard, the average delivery time for the business is around 35 days. And the West region has the lowest average delivery time, around 33 days. Meanwhile, the Central region has the longest average delivery time, around 37 days.
-|![](images/fig.6.png)|
-|:--:|
-|**Fig.4. AVG Delivery Time by Region**|
+**Returned Rate & Delivert Analysis**
+- Technology items have the highest return rate, **8.45%**, followed by furniture with **8.06%** and finally office supplies with **7.85%**. Meanwhile, Same Day shipping mode has the highest return rate at **11.79%**, second is First Class with **9.88%**. With Same Day shipping mode, Technology items have a very high return rate, up to **14.29%**, followed by First Class with **10.63%**. Although the number of transactions of technology items using either shipping mode is not too much, but with such a high return rate, this is also a high risk cause. In addition, the remaining shipping modes such as Standard and Second Class also have quite high return rates.
+- For the customer segment, the Consumer group has the highest technology product return rate at **9.15%**, possibly due to high expectations, easy to change their mind and somewhat emotional shopping.
+- In general, technology products are high-value items, prone to errors, and customers are often more careful about returns. Therefore, choosing urgent delivery methods can easily lead to errors leading to customer dissatisfaction.
 
-To explain the difference, let's look at the following two figures, which are a matrix showing the distribution of shipping modes in the regions and a column chart showing the average delivery time of each shipping mode.
-|![](images/fig.7.png)|![](images/fig.8.png)|
-|:--:|:--:|
-|**Fig.5. Matrix showing the distribution of shipping modes in the regions**|**Fig.6. Column chart showing the AVG delivery time of each shipping mode**|
+**Revenue Forecast**
 
-We can see in the matrix that the West region has the highest number of orders shipped using the two express delivery methods (First Class and Same Day) among the four regions, with **256** and **89** orders shipped, respectively. In Fig.7, we can also see that the average delivery time of shipping modes in the Western region is shorter than that of the same shipping modes in other regions. This explains why the average delivery time in this region tends to be shorter than in other regions.
-|![](images/fig.10.png)|
-|:--:|
-|**Fig.7. AVG Delivery Time by Regions and Shipping Mode**|
+Based on the growth of revenue in previous year, revenue forecast for next quarter (2018 Q1) is around **$165,675**, high around **$212,340** and low around **$119,010**.
 
-*2. How does delivery time impact profitability ?*
+So, what should we do after we know all these valuable insights ? Let's discuss this question in the next section.
 
-|![](images/fig.9.png)|
-|:--:|
-|**Fig.8. Profit by regions**|
+## IV. Actionable insights
+I will give some next moves based on the insights analyzed above. Specifically as follows:
+**Revenue & Supply Chain Efficiency**
+- Negative gross margin (-1.83%) despite increasing revenue => Review pricing and promotion policies.
+- Office Supplies is highly profitable => Increase marketing focus, prioritize sales.
+- Consumer brings in the main revenue => Maintain care, expand into Corporate & Home Office as well.
+- Central region has big losses & slow delivery => Optimize logistics, limit deep discounts here.
+- Furniture loses due to wrong discounts => Adjust discount program.
 
-From the chart in Figure 8, we can see that the West region with the lowest average delivery time is the region with the highest profit. This may be because customers perceive this region as having faster delivery times than other regions, so they place more orders, **1611 orders** in total (Matrix in Figure 5 shows that), thereby helping to increase revenue, as well as profit in the region.
+**Return and Delivery Analysis**
+- Technology products need to be more carefully controlled for quality before delivery, due to high return rates across all delivery methods. Take steps such as: Check for technical errors (hardware/software) before packaging; Enhance safe packaging for perishable products; Provide clear instructions for use, reducing misunderstandings about features.
+- Limit Same Day use for high-value technology orders, but do not completely remove it – use it selectively, for example: only with loyal customers and good purchase history.
 
-*3. Which region has the highest return rate ?*
+**First quarter/2018 Forecast**
 
-|![](images/fig.11.png)|
-|:--:|
-|**Fig.9. Total returned orders by regions**|
-
-Despite being known as the region with the shortest average delivery time, the West region also had the highest number of returned orders, with **189 orders**, accounting for **63.85%** of the business's total returned orders (Fig.11). To examine why the West region has such a high return rate, let's look at the image below (Fig.12)
-|![](images/fig.13.png)|
-|:--:|
-|**Fig.10. Total returned orders by categories and regions**|
-
-From the above matrix, we can see that in the Western region, the highest number of returned orders belongs to Office Supplies, with **149 returned orders**, this is also the category with the highest return rate of the business, we will discuss the issue in the next question.
-
-*4. Which product has the highest return rate, and what are the key causes ?*
-
-|![](images/fig.14.png)|
-|:--:|
-|**Fig.11. Returned rates by categories**|
-
-Figure 11 shows the number of times the three product categories (Office Supplies, Furniture, Technology) were returned in orders. Of these, the Office Supplies category led with **473 returns**. There are a few reasons why this could happen, it could be the sub-category of the category or the type of customer ordering these Office Supplies items. Let’s take a look at some visuals to try and figure out why.
-
-|![](images/fig.15.png)|![](images/fig.16.png)|
-|:--:|:--:|
-|**Fig.12. Table showing top 5 most returned sub-categories**|**Fig.13. Matrix showing returned rates by customer segment and categories**|
+Estimated revenue around **$165.7k** (highest possible around **$212k**) => Prepare flexible plans, prioritize high-profit product groups (Office Supplies), increase marketing at the beginning of the quarter.
 
 
